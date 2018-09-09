@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+
+	<title>Anzac</title>
+	<link href="assets/js/plugins/jqweui/css/weui.min.css" rel="stylesheet" type="text/css" />
+	<link href="assets/js/plugins/jqweui/css/jquery-weui.min.css" rel="stylesheet" type="text/css" />
+	<link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+	<link href="assets/css/map.css" rel="stylesheet" type="text/css" />
+	<link href="assets/css/anzac.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body ontouchstart>
+	<div class="logo"></div>
+	<div class="nav">
+		<div class="home active">Home</div>
+		<div class="monument">ANZAC Monument</div>
+		<div class="create">Create Your Portrait</div>
+	</div>
+	<div class="sllogo"></div>
+	<div class="border"></div>
+	<div class="auBox"></div>
+	<div class="soldier"></div>
+
+	<div class="detailMask">
+		<img class="highQualityImg" src="">
+		<div class="detail"></div>
+	</div>
+
+	<div class="monumentBox">
+		<div id="map"></div>
+	</div>
+
+	<div class="createBox">
+		<img class="portraitImg" src="./assets/images/portrait.png" >
+		<img class="portraitImg2" src="./assets/images/portrait2.jpg" >
+		<img class="portraitImg3" src="./assets/images/portrait3.png" >
+		<div class="btn upload">UPLOAD</div>
+		<div class="btn confirm">CONFIRM</div>
+	</div>
+
+
+<script src="assets/js/plugins/jquery/jquery-2.1.4.js"></script>
+<script src="assets/js/plugins/jqweui/fastclick.js"></script>
+<script>
+	$(function() {
+		FastClick.attach(document.body);
+	});
+</script>
+<script src="assets/js/plugins/jqweui/jquery-weui.min.js"></script>
+<script>
+	// -26.878810, 134.371593
+	function initMap() {
+		var myLatLng = {lat: -28.378810, lng: 133.418015};
+		var map = new google.maps.Map(document.getElementById('map'), {
+			zoom: 5,
+			center: myLatLng
+		});
+
+		var locations = [
+			{lat: -27.445474, lng:152.953846},
+			{lat:-27.445419, lng:152.991759},
+			{lat:-27.479829, lng:152.980468},
+			{lat:-27.475170, lng:153.035087},
+			{lat:-27.467351, lng:153.026159},
+			{lat:-28.003969, lng:153.431362},
+			{lat:-27.962933, lng:153.415082},
+			{lat:-33.875875, lng:151.210883},
+			{lat:-33.867858, lng:151.181447},
+			{lat:-35.281201, lng:149.148295},
+			{lat:-37.981267, lng:145.134444},
+			{lat:-37.757445, lng:145.118917},
+			{lat:-42.852546, lng:147.350222},
+			{lat:-32.225732, lng:115.986231},
+			{lat:-31.956583, lng:115.862989},
+			{lat:-10.235034, lng:142.217050},
+			{lat:-10.584080, lng:142.216530},
+			{lat:-23.694304, lng:133.881795}
+		];
+
+		locations.forEach(e => {
+			var marker = new google.maps.Marker({
+				position: e,
+				map: map,
+				animation: google.maps.Animation.DROP,
+				title: 'ANZAC'
+			});
+		})
+	}
+</script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDtOonhWUneprBxWKSZC89iiKbKKYcucHQ&callback=initMap" type="text/javascript"></script>
+<script src="assets/js/common.js"></script>
+<script>
+
+	var data = {
+    	resource_id: 'cf6e12d8-bd8d-4232-9843-7fa3195cee1c', // the resource id
+		limit: 600, // get 5 results
+  	};
+  	$.ajax({
+		url:  govHost + 'datastore_search',
+		data: data,
+    	success: function(r) {
+			if(r.success && r.result.records.length != 0){
+				var list = r.result.records;
+				var html0 = '';
+				var soldiers = [];
+				list.forEach((e, i) => {
+					var name = e['Title of image'];
+					if(name != "") {
+						soldiers.push(e);
+					}
+				});
+				soldiers.forEach((e, i) => {
+					var name = e['Title of image'];
+					var src = e['Medium resolution image'];
+					var names = name.split(',');
+					html0 += '<div class="item" data-src="' + src + '">';
+					html0 += '<div class="name">' + names[0] + '</div>';
+					html0 += '<img class="avatar" src=' + src + '>';
+					html0 += '</div>';
+				});
+				$('.soldier').append(html0);
+				$('.item').click(function(e){
+					var src = $(this).data('src');
+					$('.detailMask').show();
+					$('.detailMask').find('img').attr("src", src);
+				});
+			}
+    	}
+  	});
+
+	$('.home').on('click', function(){
+		$('.active').removeClass('active');
+		$(this).addClass('active');
+		$('.monumentBox').hide();
+		$('.createBox').hide();
+	});
+	$('.monument').on('click', function(){
+		$('.active').removeClass('active');
+		$(this).addClass('active');
+		$('.monumentBox').show();
+		$('.createBox').hide();
+	});
+	$('.create').on('click', function(){
+		$('.active').removeClass('active');
+		$(this).addClass('active');
+		$('.monumentBox').hide();
+		$('.createBox').show();
+	});
+	$('.detailMask').on('click', function(){
+		$(this).hide();
+	});
+
+</script>
+
+
+</body>
+</html>

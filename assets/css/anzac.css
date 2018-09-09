@@ -1,0 +1,224 @@
+.soldier {
+	width: 100%;
+	height: 100%;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+	flex-wrap: wrap;
+	position: relative;
+	overflow: hidden;
+	background-color: rgba(0, 0, 0, .8);
+	/* min-width: 1000px; */
+}
+
+.item {
+	width: 80px;
+	height: 110px;
+	font-size: 0;
+	box-sizing: border-box;
+	overflow: hidden;
+	position: relative;
+	animation: slideshow 34s linear infinite;
+}
+
+@keyframes slideshow {
+	0%    { top: 0;  }
+	100%  { top: -120%; }
+}
+
+.item:hover {
+	box-shadow: 0px 0px 15px 5px #d0d0d0;
+}
+
+.name {
+	max-width: 100%;
+	text-align: center;
+	font-size: 1rem;
+	text-overflow: ellipsis;
+	word-break: normal;
+	overflow: hidden;
+	white-space: nowrap;
+	padding: 0 10px;
+	box-sizing: border-box;
+	display: none;
+}
+
+.avatar {
+	width: 100%;
+}
+
+img[src=""], img:not([src]) {
+	opacity: 0;
+}
+
+.auBox {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-image: url("../images/aus.png");
+    background-position: center;
+    background-repeat: no-repeat;
+	background-size: cover;
+	pointer-events: none;
+	z-index: 10;
+}
+
+.nav {
+	position: absolute;
+	left: 4%;
+	top: 50%;
+	transform: translateY(-50%);
+	z-index: 12;
+}
+
+.nav > div {
+	padding: 15px;
+	margin: 15px 0;
+	text-align: center;
+	font-size: 22px;
+	border: 1px solid rgba(0, 0, 0, 0);
+	cursor: pointer;
+}
+
+.nav div:hover {
+	border: 1px solid gray;
+}
+
+.active {
+	border: 1px solid black!important;
+}
+
+.logo {
+	position: absolute;
+	left: 4%;
+    top: 1.2%;
+	width: 200px;
+	height: 200px;
+	background-image: url(../images/ancazlogo.png);
+	background-repeat: no-repeat;
+	z-index: 12;
+}
+
+.sllogo {
+	position: absolute;
+	left: 4%;
+	bottom: 1.2%;
+	width: 200px;
+	height: 100px;
+	background-image: url(../images/sllogo.png);
+	background-repeat: no-repeat;
+	z-index: 12;
+}
+
+.border {
+	position: absolute;
+	left: calc(8% + 200px);
+	top: 50%;
+	transform: translateY(-50%);
+	background-color: black;
+	width: 2px;
+	height: 93%;
+	z-index: 12;
+}
+
+.monumentBox {
+	position: absolute;
+	right: 0;
+	top: 0;
+	left: calc(8% + 202px);
+	height: 100%;
+	width: calc(92% - 202px);
+	/* width: 100%; */
+	background-color: white;
+	z-index: 12;
+	display: none;
+}
+
+.detailMask {
+	width: calc(92% - 202px);
+	position: absolute;
+	right: 0;
+	top: 0;
+	left: calc(8% + 202px);
+	height: 100%;
+	/* width: 100%; */
+	background-color: rgba(0, 0, 0, .6);
+	z-index: 12;
+	display: none;
+}
+
+.detail {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-49%, -56%);
+	width: 74%;
+	height: 80%;
+	background-image: url(../images/detail.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.highQualityImg {
+	position: absolute;
+    left: 395px;
+    z-index: 12;
+    width: 200px;
+    top: 223px;
+}
+
+.createBox {
+	width: calc(92% - 202px);
+	position: absolute;
+	right: 0;
+	top: 0;
+	left: calc(8% + 202px);
+	height: 100%;
+	/* width: 100%; */
+	background-color: white;
+	z-index: 12;
+	display: none;
+	background-image: url(../images/bg.png);
+	background-repeat: no-repeat;
+}
+
+.portraitImg {
+	position: absolute;
+	left: 15%;
+	top: 30%;
+	width: 20%;
+}
+
+.portraitImg2 {
+	position: absolute;
+	left: calc(15% + 350px);
+	top: 30%;
+	width: 20%;
+}
+
+.portraitImg3 {
+	position: absolute;
+	left: calc(15% + 700px);
+	top: 30%;
+	width: 20%;
+}
+
+.btn {
+	position: absolute;
+	top: 60%;
+	left: 40%;
+	padding: 12px;
+	width: 100px;
+	margin: 15px 0;
+	text-align: center;
+	font-size: 22px;
+	border: 1px solid rgba(0, 0, 0, 1);
+	cursor: pointer;
+}
+
+.confirm {
+	left: calc(40% + 150px);
+}
