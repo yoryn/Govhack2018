@@ -1,7 +1,10 @@
 # Govhack2018
 
 ## TEAM Stawberry
-  Kang Liao // Yonglin Chen // Tianyi Zhang // Xingnan Xia
+ * Kang Liao 
+ * Yonglin Chen 
+ * Tianyi Zhang 
+ * Xingnan Xia
 
 Australia’s history should be acknowledged and remembered, it can inspire a nation, educate next generation, also let travelers, immigrants better understand the background of Australia.    
 In order to engage people with ANZAC, we designed a website let our next generation, immigrants, travelers to read and understand the detailed stories behand each Anzac soldier during the First World War.
