@@ -5,22 +5,22 @@ Just need a click of the soldier’s photo, our website will tell you the soldie
 You can also find all the ANZAC monuments in our map, we will navigate you to the monument you want to visit. 
 Moreover, if you wish to become one of them, our website also allows you to upload your photo and we will generate your exclusive ANZAC portrait for you. Isn’t it a special souvenir? Our website provides convenient, interactive methods for next generation, immigrants and travelers to engage with ANZAC.
 
-Finding soldier
+### Finding soldier
 	Clicking each soldier’s image
 	Linking to their stories and life experience 
 	Understanding their contribution
 
 
-MAP:
-	Displaying all Anzac monument locations in Australia map
-	Showing the nearest one around you
-	Showing pictures of each Anzac monument
-	Navigating you to monument where you want to visit
+### MAP:
+-	Displaying all Anzac monument locations in Australia map
+-	Showing the nearest one around you
+- Showing pictures of each Anzac monument
+-	Navigating you to monument where you want to visit
 
 
-Generate exclusive Anzac portrait:
-	Allowing you upload your own photo 
-	Generating your Anzac portrait as your special souvenir 
+### Generate exclusive Anzac portrait:
+-	Allowing you upload your own photo 
+-	Generating your Anzac portrait as your special souvenir 
 
 
 
