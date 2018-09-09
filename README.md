@@ -1,6 +1,6 @@
 # Govhack2018
 
-### TEAM Stawberry
+### TEAM Strawberry
  * Kang Liao 
  * Yonglin Chen 
  * Tianyi Zhang 
