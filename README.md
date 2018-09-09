@@ -6,9 +6,9 @@ You can also find all the ANZAC monuments in our map, we will navigate you to th
 Moreover, if you wish to become one of them, our website also allows you to upload your photo and we will generate your exclusive ANZAC portrait for you. Isn’t it a special souvenir? Our website provides convenient, interactive methods for next generation, immigrants and travelers to engage with ANZAC.
 
 ### Finding soldier
-	Clicking each soldier’s image
-	Linking to their stories and life experience 
-	Understanding their contribution
+-	Clicking each soldier’s image
+-	Linking to their stories and life experience 
+-	Understanding their contribution
 
 
 ### MAP:
@@ -25,7 +25,7 @@ Moreover, if you wish to become one of them, our website also allows you to uplo
 
 
 
-BACKGROUD:
+### BACKGROUD:
 'ANZAC' stands for Australian and New Zealand Army Corps. 
 On the 25th of April 1915, Australian and New Zealand soldiers formed part of the allied expedition that set out to capture the Gallipoli peninsula. These became known as Anzacs and the pride they took in that name continues to this day. 
 
@@ -38,5 +38,5 @@ At the end of 1915, the allied forces were evacuated. Both sides suffered heavy 
 
 The Anzacs were courageous and although the Gallipoli campaign failed in its military objectives, the Australian and New Zealand actions during the campaign left us all a powerful legacy. 
 
-What does Anzac Day mean today? 
+### What does Anzac Day mean today? 
 Anzac Day served to commemorate the lives of Australians who died in that war. The meaning of Anzac Day today includes the remembrance of all Australians killed in military operations.
