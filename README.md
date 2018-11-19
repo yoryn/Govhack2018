@@ -12,6 +12,8 @@ Just need a click of the soldier’s photo, our website will tell you the soldie
 You can also find all the ANZAC monuments in our map, we will navigate you to the monument you want to visit. 
 Moreover, if you wish to become one of them, our website also allows you to upload your photo and we will generate your exclusive ANZAC portrait for you. Isn’t it a special souvenir? Our website provides convenient, interactive methods for next generation, immigrants and travelers to engage with ANZAC.
 
+Promotional video URL:https://www.youtube.com/watch?v=hU8coU7f2_Q
+
 ### Finding soldier
 -	Clicking each soldier’s image
 -	Linking to their stories and life experience 
